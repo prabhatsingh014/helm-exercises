@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: helm-exercise
+spec:
+  template:
+    metadata:
+      name: nginx-deployment
+    spec:
+      container:
+        - name: nginx-container
+          image: nginx:latest
+          port:
+            - 80
